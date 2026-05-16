@@ -12,10 +12,6 @@ body {
   align-items: center;
 }
 
-
-
-
-
 time{
   display: block
 }
@@ -29,7 +25,7 @@ header{
   padding: 0.8rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  width: 70%;
+  width: 90%;
   pointer-events: auto;
   text-align: center;
   height: fit-content;

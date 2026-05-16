@@ -46,14 +46,20 @@ html, body {
 #map circle,
 .legend>div {
   pointer-events: auto !important;
-  --color-departures: steelblue; /* Adjust colors to your preference */
+  --color-departures: steelblue; 
   --color-arrivals: darkorange;
-  --color: color-mix(
-    in oklch, 
+  --color: color-mix(in oklch, 
     var(--color-departures) calc(100% * var(--departure-ratio)),
     var(--color-arrivals));
 }
 
+#map svg circle {
+    fill: steelblue;
+    fill-opacity: 0.8;
+    stroke: white;
+    pointer-events: auto;
+    fill: var(--color);
+}
 
 .legend {
   display: flex;
@@ -65,13 +71,13 @@ html, body {
   margin-bottom: 10px;   
 }
 
-
 .legend > div {
   flex: 1 1 1px;  
   background: var(--color);
   color: white;          
   padding: 0.5em 1.5em;
   text-align: center;
+  margin:1px;
 }
 
 .legend > div:first-child {
@@ -82,12 +88,4 @@ html, body {
   text-align: right;
 }
 
-/* circle */
-#map svg circle {
-    fill: steelblue;
-    fill-opacity: 0.8;
-    stroke: white;
-    pointer-events: auto;
-    fill: var(--color);
-}
 
